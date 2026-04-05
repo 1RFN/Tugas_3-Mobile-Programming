@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0E14"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/logo_unram"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_ukm_game"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW MEMBER REGISTRATION"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#00E676"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Member Name / Nickname"
+            android:textColorHint="#707070"
+            app:hintTextColor="#00E676"
+            app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+            app:startIconTint="#00E676"
+            app:boxStrokeColor="#00E676"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Member ID (NIM)"
+            android:textColorHint="#707070"
+            app:hintTextColor="#00E676"
+            app:startIconDrawable="@android:drawable/ic_lock_lock"
+            app:startIconTint="#00E676"
+            app:boxStrokeColor="#00E676"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/etNim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SELECT BASE FACULTY:" android:textStyle="bold" android:textColor="#A0A0A0" android:textSize="12sp" android:layout_marginBottom="8dp"/>
+        <Spinner android:id="@+id/spProdi" android:layout_width="match_parent" android:layout_height="48dp" android:backgroundTint="#00E676" android:layout_marginBottom="20dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SELECT GENDER:" android:textStyle="bold" android:textColor="#A0A0A0" android:textSize="12sp" android:layout_marginBottom="8dp"/>
+        <RadioGroup android:id="@+id/rgGender" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="20dp">
+            <RadioButton android:id="@+id/rbLaki" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pria" android:textColor="#FFFFFF" android:buttonTint="#00E676" android:layout_marginEnd="16dp"/>
+            <RadioButton android:id="@+id/rbPerempuan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wanita" android:textColor="#FFFFFF" android:buttonTint="#00E676"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SELECT HOBBY / INTEREST:" android:textStyle="bold" android:textColor="#A0A0A0" android:textSize="12sp" android:layout_marginBottom="8dp"/>
+        <CheckBox android:id="@+id/cbCoding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Game Programming" android:textColor="#FFFFFF" android:buttonTint="#00E676"/>
+        <CheckBox android:id="@+id/cbDesign" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3D/2D Art &amp; Design" android:textColor="#FFFFFF" android:buttonTint="#00E676"/>
+        <CheckBox android:id="@+id/cbAudio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Audio &amp; Music Production" android:textColor="#FFFFFF" android:buttonTint="#00E676"/>
+        <CheckBox android:id="@+id/cbLainnya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lainnya" android:textColor="#FFFFFF" android:buttonTint="#00E676"/>
+
+        <EditText android:id="@+id/etHobiLainnya" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Sebutkan hobi/minat lainnya..." android:textColorHint="#606060" android:textColor="#FFFFFF" android:backgroundTint="#00E676" android:visibility="gone" android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Why do you want to join? (Objectives)"
+            android:textColorHint="#707070"
+            app:hintTextColor="#00BCD4"
+            app:startIconDrawable="@android:drawable/ic_menu_edit"
+            app:startIconTint="#00BCD4"
+            app:boxStrokeColor="#00BCD4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/etAlasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:lines="3"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnTampilkan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="[ CREATE MEMBER PROFILE ]"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#00E676"
+            android:textColor="#0A0E14"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"/>
+    </LinearLayout>
+</ScrollView>
